@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ángela Nava Bolaños — Página Personal</title>
+  <meta name="description" content="Portafolio personal, proyectos y contacto." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --card: #11141a;
+      --text: #e6e9ef;
+      --muted: #9aa3b2;
+      --accent: #6aa9ff;
+      --accent-2: #7ef0c1;
+      --border: #202630;
+    }
+    :root.light {
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --text: #0b0d10;
+      --muted: #556070;
+      --accent: #2f6ded;
+      --accent-2: #18b089;
+      --border: #e6e9ef;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1100px; padding: 24px; margin: 0 auto; }
+
+    /* NAV */
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; position: sticky; top: 0; background: color-mix(in oklab, var(--bg) 90%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--border); padding: 10px 24px; z-index: 10; }
+    .brand { font-weight: 800; letter-spacing: .5px; }
+    .nav-links { display: flex; gap: 16px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; border: 1px solid var(--border); background: linear-gradient(180deg, color-mix(in oklab, var(--card) 95%, transparent), var(--card)); color: var(--text); font-weight: 600; transition: transform .08s ease; }
+    .btn:hover { transform: translateY(-1px); text-decoration: none; }
+
+    /* HERO */
+    .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 32px; padding: 72px 24px 32px; align-items: center; }
+    .hero h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.1; margin: 0 0 12px; }
+    .hero p { font-size: clamp(16px, 2.4vw, 18px); color: var(--muted); margin: 0 0 22px; }
+    .hero-card { background: radial-gradient(1200px 600px at -20% -10%, color-mix(in oklab,var(--accent) 15%, transparent), transparent 50%),
+                                 radial-gradient(900px 500px at 120% 10%, color-mix(in oklab,var(--accent-2) 14%, transparent), transparent 60%),
+                                 var(--card);
+                 border: 1px solid var(--border); padding: 28px; border-radius: 20px; }
+    .avatar { width: 120px; height: 120px; border-radius: 24px; border: 2px solid var(--border); background: linear-gradient(180deg, var(--bg), var(--card)); display: grid; place-items: center; font-size: 48px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    .chip { padding: 8px 12px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); }
+
+    /* SECTIONS */
+    section { padding: 32px 24px; }
+    h2 { font-size: 22px; letter-spacing: .3px; margin: 0 0 18px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { border: 1px solid var(--border); border-radius: 16px; background: var(--card); padding: 18px; }
+    .card h3 { margin: 0 0 6px; font-size: 18px; }
+    .muted { color: var(--muted); font-size: 14px; }
+
+    /* TIMELINE */
+    .timeline { border-left: 2px solid var(--border); margin-left: 10px; padding-left: 18px; }
+    .timeline-item { margin: 14px 0; }
+    .timeline-item .when { font-size: 12px; color: var(--muted); }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 24px; color: var(--muted); font-size: 14px; text-align: center; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .nav-links { display:none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">Ángela Nava Bolaños</div>
+    <nav class="nav-links">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button id="theme" class="btn" title="Cambiar tema" aria-label="Cambiar tema">🌓 Tema</button>
+  </header>
+
+  <main class="container">
+    <section class=\"hero\">
+      <div>
+        <h1>Hola, soy <span style=\"color:var(--accent)\">Ángela Nava Bolaños</span> ✨</h1>
+        <p>Investigadora posdoctoral en la Facultad de Ciencias (UNAM). Integro ciencia de datos, modelado computacional e IA para estudiar biodiversidad y apoyar decisiones en conservación, seguridad alimentaria y cambio climático.</p>
+        <div class=\"chips\">
+          <span class=\"chip\">#Biodiversidad</span>
+          <span class=\"chip\">#Polinizadores</span>
+          <span class=\"chip\">#Ecoinformática</span>
+          <span class=\"chip\">#IA</span>
+          <span class=\"chip\">#ModeladoDeNicho</span>
+        </div>
+        <div style=\"margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;\">
+          <a class=\"btn\" href=\"#proyectos\">🚀 Ver publicaciones</a>
+          <a class=\"btn\" href=\"mailto:anb@ciencias.unam.mx\">✉️ Contacto</a>
+          <a class=\"btn\" href=\"https://orcid.org/0000-0002-4371-5415\" target=\"_blank\" rel=\"noopener\">🧬 ORCID</a>
+          <a class=\"btn\" href=\"https://scholar.google.com/citations?user=4h8Jye4AAAAJ\" target=\"_blank\" rel=\"noopener\">📚 Google Scholar</a>
+          <a class=\"btn\" href=\"https://www.scopus.com/authid/detail.uri?authorId=54420738800\" target=\"_blank\" rel=\"noopener\">📊 Scopus</a>
+        </div>
+      </div>
+      <div class=\"hero-card\">
+        <div class=\"avatar\" aria-hidden>🐝</div>
+        <h2 style=\"margin-top:16px\">En breve</h2>
+        <p class=\"muted\">Aplico ciencia de datos y modelación para comprender procesos ecológicos/evolutivos y priorizar conservación de polinizadores.</p>
+        <ul>
+          <li>🎯 Objetivo: mapear y proteger áreas críticas para polinizadores en México y Mesoamérica.</li>
+          <li>🏆 +20 publicaciones; h=11; liderazgo en 9 como primera autora.</li>
+          <li>🧰 R, Python, modelado de nicho, GIS, machine/deep learning y flujos reproducibles.</li>
+        </ul>
+      </div>
+    </section>
+
+    $1
+        <article class=\"card\">
+          <h3>Áreas críticas para la conservación de polinizadores en México (2023)</h3>
+          <p class=\"muted\">Identificamos zonas prioritarias para la conservación con enfoques espaciales y de conectividad.</p>
+          <p><a href=\"https://doi.org/10.1016/j.biocon.2023.110119\" target=\"_blank\" rel=\"noopener\">DOI 10.1016/j.biocon.2023.110119 →</a></p>
+        </article>
+        <article class=\"card\">
+          <h3>BeeBDC: dataset global de abejas con etiquetado de calidad (2023)</h3>
+          <p class=\"muted\">Coautora del flujo reproducible para limpiar y estandarizar ocurrencias de abejas a escala global.</p>
+          <p><a href=\"https://doi.org/10.1038/s41597-023-02660-8\" target=\"_blank\" rel=\"noopener\">DOI 10.1038/s41597-023-02660-8 →</a></p>
+        </article>
+        <article class=\"card\">
+          <h3>Trade-offs genéticos en adaptaciones (2025)</h3>
+          <p class=\"muted\">Colaboración en predicción de la prevalencia de trade-offs entre sustituciones adaptativas.</p>
+          <p><a href=\"https://doi.org/10.1093/evolut/qpaf061\" target=\"_blank\" rel=\"noopener\">DOI 10.1093/evolut/qpaf061 →</a></p>
+        </article>
+      $2
+
+    $1
+        <div class=\"timeline-item\">
+          <strong>Investigadora Posdoctoral · LANBioCC, UMDI Juriquilla, Facultad de Ciencias, UNAM</strong>
+          <div class=\"when\">2022 — Presente · Querétaro, México</div>
+          <div class=\"muted\">Patrones de biodiversidad de polinizadores y seguridad alimentaria; docencia y dirección de tesis.</div>
+        </div>
+        <div class=\"timeline-item\">
+          <strong>Investigadora Posdoctoral · Museo de Zoología, Facultad de Ciencias, UNAM</strong>
+          <div class=\"when\">2021 — 2022 · Ciudad de México</div>
+          <div class=\"muted\">Proyectos sobre biodiversidad de polinizadores; colaboración interinstitucional.</div>
+        </div>
+        <div class=\"timeline-item\">
+          <strong>Postdoctoral Researcher · University of Kansas</strong>
+          <div class=\"when\">2019 — 2021 · Lawrence, KS, EUA</div>
+          <div class=\"muted\">Polinizadores como actores clave en sustentabilidad alimentaria; modelos de nicho y SIG.</div>
+        </div>
+      $2
+
+    $1
+      <p>Doctora en Ciencias Biomédicas por la UNAM (mención honorífica) y miembro del SNI nivel I. He realizado estancias en México, EUA y Europa, y publicado más de 20 artículos y 4 capítulos de libro, con liderazgo en 9 publicaciones como primera autora y 4 como autora de correspondencia. Integro enfoques de R/Python, ecoinformática y aprendizaje automático para responder preguntas sobre biodiversidad, hibridación bajo cambio climático y priorización de conservación. Disfruto la docencia (licenciatura/posgrado) y la formación de talento en programación y modelado ecológico.</p>
+    $2
+
+    $1
+        <p>¿Colaboramos? Escríbeme a <a href=\"mailto:anb@ciencias.unam.mx\">anb@ciencias.unam.mx</a>. También puedes visitar mis perfiles: <a href=\"https://orcid.org/0000-0002-4371-5415\" target=\"_blank\" rel=\"noopener\">ORCID</a>, <a href=\"https://scholar.google.com/citations?user=4h8Jye4AAAAJ\" target=\"_blank\" rel=\"noopener\">Google Scholar</a> y <a href=\"https://www.scopus.com/authid/detail.uri?authorId=54420738800\" target=\"_blank\" rel=\"noopener\">Scopus</a>.</p>
+      $2
+  </main>
+
+  <footer>
+    © <span id=\"year\"></span> Ángela Nava Bolaños. Construida con HTML/CSS/JS y alojada en GitHub Pages.
+  </footer>
+
+  <script>
+    // Persistencia de tema claro/oscuro
+    const root = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    if(saved === 'light') root.classList.add('light');
+    document.getElementById('theme').addEventListener('click', () => {
+      root.classList.toggle('light');
+      localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark');
+    });
+    // Año automático
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
