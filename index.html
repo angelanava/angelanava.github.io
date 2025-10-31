@@ -57,7 +57,7 @@
   <!-- Sidebar -->
   <aside class="sidebar card">
     <div class="avatar" aria-hidden></div>
-    <h1 itemprop="name">Ángela Nava Bolaños</h1>
+    <h1 itemprop="name">Angela Nava Bolaños</h1>
     <div class="muted" itemprop="jobTitle">Investigadora Posdoctoral · Facultad de Ciencias, UNAM</div>
     <div class="chips">
       <span class="chip">Biodiversidad</span>
@@ -207,7 +207,7 @@
   document.getElementById('theme').addEventListener('click',()=>{ root.classList.toggle('light'); localStorage.setItem('theme', root.classList.contains('light')?'light':'dark'); });
   document.getElementById('year').textContent=new Date().getFullYear();
   // Structured data Person (JSON-LD)
-  const ld={"@context":"https://schema.org","@type":"Person","name":"Ángela Nava Bolaños","email":"mailto:anb@ciencias.unam.mx","affiliation":{"@type":"CollegeOrUniversity","name":"Universidad Nacional Autónoma de México"},"url":"https://angelanava.github.io","sameAs":["https://orcid.org/0000-0002-4371-5415","https://scholar.google.com/citations?user=4h8Jye4AAAAJ","https://www.scopus.com/authid/detail.uri?authorId=54420738800"]};
+  const ld={"@context":"https://schema.org","@type":"Person","name":"Angela Nava Bolaños","email":"mailto:anb@ciencias.unam.mx","affiliation":{"@type":"CollegeOrUniversity","name":"Universidad Nacional Autónoma de México"},"url":"https://angelanava.github.io","sameAs":["https://orcid.org/0000-0002-4371-5415","https://scholar.google.com/citations?user=4h8Jye4AAAAJ","https://www.scopus.com/authid/detail.uri?authorId=54420738800"]};
   const s=document.createElement('script'); s.type='application/ld+json'; s.textContent=JSON.stringify(ld); document.head.appendChild(s);
 </script>
 </body>
