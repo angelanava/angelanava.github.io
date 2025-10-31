@@ -3,213 +3,380 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Angela Nava Bolaños — Perfil Académico</title>
-  <meta name="description" content="Perfil académico y profesional de Angela Nava Bolaños: publicaciones, líneas de investigación, docencia y contacto." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <title>Angela Nava Bolaños — Proyectos de Síntesis Ecológica y Ciencia de Datos</title>
+  <meta name="description" content="Portafolio de proyectos de Angela Nava Bolaños: síntesis ecológica, ciencia de datos de la biodiversidad y cambio global, IA aplicada, modelación ecológica y bioinformática." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
   <style>
-    :root { --bg:#0b0d10; --surface:#11141a; --text:#e6e9ef; --muted:#9aa3b2; --border:#202630; --accent:#69a7ff; --accent2:#7ef0c1; }
+    :root { --bg:#0b0d10; --surface:#10131a; --text:#e6e9ef; --muted:#9aa3b2; --border:#1e2430; --accent:#69a7ff; --accent2:#7ef0c1; }
     :root.light { --bg:#f7f8fb; --surface:#ffffff; --text:#0b0d10; --muted:#5a6577; --border:#e6e9ef; --accent:#2f6ded; --accent2:#18b089; }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial; background:var(--bg); color:var(--text); line-height:1.56}
+    body{margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial; background:var(--bg); color:var(--text); line-height:1.58}
     a{color:var(--accent); text-decoration:none}
-    a:hover{ text-decoration:underline}
-    .wrap{max-width:1100px; margin:0 auto; padding:18px}
-    .layout{display:grid; grid-template-columns: 320px 1fr; gap:22px}
-    .card{background:var(--surface); border:1px solid var(--border); border-radius:18px; padding:18px}
-    .sidebar .avatar{width:120px; height:120px; border-radius:24px; border:2px solid var(--border); background:linear-gradient(180deg,var(--bg),var(--surface)); display:grid; place-items:center; font-size:48px;}
-    h1{font-size:clamp(28px,4.6vw,42px); margin:6px 0 4px}
-    h2{font-size:18px; margin:0 0 10px; letter-spacing:.2px}
-    h3{font-size:16px; margin:12px 0 6px}
-    .muted{color:var(--muted)}
-    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
-    .chip{border:1px solid var(--border); border-radius:999px; padding:6px 10px; font-size:12px; color:var(--muted)}
+    a:hover{text-decoration:underline}
+    .nav{position:sticky; top:0; z-index:40; background:color-mix(in oklab, var(--bg) 92%, transparent); border-bottom:1px solid var(--border); backdrop-filter:blur(6px)}
+    .nav .inner{max-width:1100px; margin:0 auto; padding:10px 18px; display:flex; align-items:center; justify-content:space-between}
+    .brand{font-weight:800}
     .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 12px; border-radius:12px; border:1px solid var(--border); background:linear-gradient(180deg, color-mix(in oklab, var(--surface) 95%, transparent), var(--surface)); color:var(--text); font-weight:600}
     .btn:hover{transform:translateY(-1px); text-decoration:none}
-    .section{margin-bottom:18px}
-    .pub li{margin:10px 0}
-    .pub .venue{color:var(--muted)}
-    .grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px}
-    .nav{position:sticky; top:0; z-index:20; background:color-mix(in oklab, var(--bg) 90%, transparent); border-bottom:1px solid var(--border); padding:10px 18px; backdrop-filter:blur(6px);}
-    .nav-inner{max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between}
-    .brand{font-weight:800}
-    footer{margin:20px auto; max-width:1100px; color:var(--muted); text-align:center; padding:14px}
-    @media (max-width: 960px){ .layout{grid-template-columns:1fr} }
-    /* Print */
-    @media print { .nav, #theme, .btn-download { display:none } body{background:#fff; color:#000} :root{--border:#ddd} }
+    .wrap{max-width:1100px; margin:0 auto; padding:22px 18px}
+    .hero{display:grid; grid-template-columns:1.3fr .7fr; gap:22px; align-items:center}
+    .hero .card{padding:22px}
+    .card{background:var(--surface); border:1px solid var(--border); border-radius:18px; padding:18px}
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .chip{border:1px solid var(--border); border-radius:999px; padding:6px 10px; font-size:12px; color:var(--muted)}
+    h1{font-size:clamp(28px,4.6vw,44px); margin:8px 0 4px}
+    h2{font-size:clamp(18px,2.6vw,22px); margin:0 0 10px; letter-spacing:.2px}
+    h3{font-size:18px; margin:8px 0 6px}
+    p{margin:10px 0}
+    .muted{color:var(--muted)}
+    .kpis{display:flex; gap:12px; flex-wrap:wrap; margin-top:8px}
+    .kpi{border:1px dashed var(--border); border-radius:12px; padding:8px 10px; font-size:12px; color:var(--muted)}
+    .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .grid2{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
+    .projects{margin-top:10px}
+    .project{display:grid; grid-template-columns:1fr; gap:12px}
+    .thumb{border:1px solid var(--border); border-radius:14px; overflow:hidden; background:linear-gradient(180deg, color-mix(in oklab, var(--surface) 80%, transparent), var(--surface))}
+    .thumb img{width:100%; height:220px; object-fit:cover; display:block}
+    .meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px}
+    .section{margin:22px 0}
+    footer{margin:26px auto; max-width:1100px; color:var(--muted); text-align:center; padding:14px}
+    @media (max-width: 960px){ .hero{grid-template-columns:1fr} .grid3{grid-template-columns:1fr} .grid2{grid-template-columns:1fr} .thumb img{height:200px} }
+    @media print { .nav, #theme, .btn { display:none } body{background:#fff; color:#000} :root{--border:#ddd} }
   </style>
 </head>
 <body>
-<header class="nav">
-  <div class="nav-inner">
-    <div class="brand">Angela Nava Bolaños</div>
-    <div style="display:flex; gap:8px; align-items:center">
-      <a class="btn" href="#pubs">Publicaciones</a>
-      <a class="btn" href="#docencia">Docencia</a>
-      <button id="theme" class="btn" aria-label="Cambiar tema">🌓 Tema</button>
+  <header class="nav" role="navigation" aria-label="Principal">
+    <div class="inner">
+      <div class="brand">Angela Nava Bolaños</div>
+      <nav style="display:flex; gap:8px; align-items:center">
+        <a class="btn" href="#proyectos">Proyectos</a>
+        <a class="btn" href="#linea">Línea de síntesis</a>
+        <a class="btn" href="#docencia">Docencia</a>
+        <a class="btn" href="#metricas">Resultados</a>
+        <button id="theme" class="btn" aria-label="Cambiar tema">🌓 Tema</button>
+      </nav>
     </div>
-  </div>
-</header>
+  </header>
 
-<main class="wrap layout">
-  <!-- Sidebar -->
-  <aside class="sidebar card">
-    <div class="avatar" aria-hidden></div>
-    <h1 itemprop="name">Angela Nava Bolaños</h1>
-    <div class="muted" itemprop="jobTitle">Investigadora Posdoctoral · Facultad de Ciencias, UNAM</div>
-    <div class="chips">
-      <span class="chip">Biodiversidad</span>
-      <span class="chip">Polinizadores</span>
-      <span class="chip">Modelado de nicho</span>
-      <span class="chip">Ecoinformática</span>
-      <span class="chip">Conservación</span>
-    </div>
-    <hr style="border-color:var(--border); margin:14px 0">
-    <div class="section">
-      <h2>Contacto</h2>
-      <div>Email: <a href="mailto:anb@ciencias.unam.mx" itemprop="email">anb@ciencias.unam.mx</a></div>
-      <div>ORCID: <a href="https://orcid.org/0000-0002-4371-5415" rel="me" target="_blank">0000-0002-4371-5415</a></div>
-      <div>Scholar: <a href="https://scholar.google.com/citations?user=4h8Jye4AAAAJ" target="_blank">Google Scholar</a></div>
-      <div>Scopus: <a href="https://www.scopus.com/authid/detail.uri?authorId=54420738800" target="_blank">54420738800</a></div>
-      <div class="muted" style="margin-top:6px">Métricas: ~400 citas · h = 11</div>
-    </div>
-      <div>ORCID: <a href="https://orcid.org/0000-0002-4371-5415" rel="me" target="_blank">0000-0002-4371-5415</a></div>
-      <div>Scholar: <a href="https://scholar.google.com/citations?user=4h8Jye4AAAAJ" target="_blank">Google Scholar</a></div>
-      <div>Scopus: <a href="https://www.scopus.com/authid/detail.uri?authorId=54420738800" target="_blank">54420738800</a></div>
-    </div>
-    <div class="section">
-      <a class="btn btn-download" href="cv.pdf" download>⬇️ Descargar CV (PDF)</a>
-      <div class="muted" style="font-size:12px; margin-top:6px">(Coloca tu archivo <code>cv.pdf</code> en la raíz del repositorio)</div>
-    </div>
-    <div class="section">
-      <h2>Intereses</h2>
-      <p class="muted">Patrones espaciales de biodiversidad, priorización de conservación, hibridación bajo cambio climático, seguridad alimentaria y ciencia de datos reproducible (R/Python/GIS).</p>
-    </div>
-  </aside>
-
-  <!-- Main content -->
-  <section class="content">
-    <div class="card section">
-      <h2>Resumen</h2>
-      <p>Doctora en Ciencias Biomédicas (UNAM, mención honorífica). Posdoctorado en University of Kansas y actualmente en LANBioCC-UMDI Juriquilla, Facultad de Ciencias, UNAM. He publicado más de 20 artículos y 4 capítulos de libro (h≈11), con liderazgo frecuente como primera autora y autora de correspondencia. Desarrollo flujos reproducibles para integrar datos de ocurrencia, clima y paisaje con técnicas de modelado de nicho, ML/DL y SIG, con aplicaciones directas en conservación de polinizadores.</p>
-      <div class="grid2 muted" style="margin-top:8px">
-        <div> <strong>Herramientas:</strong> R, QGIS, SDM, make</div>
-        <div> <strong>Actual:</strong> Analizar los patrones de biodiversidad de los Polinizadores en México</div>
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="card">
+        <h1>Proyectos de Síntesis Ecológica y Ciencia de Datos</h1>
+        <p>Portafolio de investigación interdisciplinaria orientada a <strong>convertir datos abiertos</strong> en <strong>conocimiento aplicable</strong> para la conservación de la biodiversidad, la gestión ambiental y la seguridad alimentaria. En esta página se muestran proyectos, resultados y materiales visuales por proyecto.</p>
+        <div class="chips" aria-label="Áreas de especialidad">
+          <span class="chip">Síntesis ecológica</span>
+          <span class="chip">Ciencia de datos</span>
+          <span class="chip">Ecoinformática</span>
+          <span class="chip">IA aplicada</span>
+          <span class="chip">Modelación ecológica</span>
+        </div>
+        <div class="kpis">
+          <div class="kpi">20+ artículos arbitrados</div>
+          <div class="kpi">400+ citas · h = 11</div>
+          <div class="kpi">5+ años posdoctorado</div>
+        </div>
       </div>
-    </div>
+      <aside class="card">
+        <h2>Contacto</h2>
+        <p>Email: <a href="mailto:anb@ciencias.unam.mx">anb@ciencias.unam.mx</a></p>
+        <p>ORCID: <a href="https://orcid.org/0000-0002-4371-5415" target="_blank" rel="me noopener">0000-0002-4371-5415</a></p>
+        <p>Scholar: <a href="https://scholar.google.com/citations?user=4h8Jye4AAAAJ" target="_blank" rel="noopener">Perfil</a> · Scopus: <a href="https://www.scopus.com/authid/detail.uri?authorId=54420738800" target="_blank" rel="noopener">54420738800</a></p>
+        <p class="muted">Esta página prioriza <em>proyectos</em> y <em>material visual</em> sobre CV.</p>
+      </aside>
+    </section>
 
-    <div class="card section" id="posiciones">
-      <h2>Posiciones</h2>
+    <!-- PROYECTOS PRINCIPALES -->
+    <section id="proyectos" class="section">
+      <h2>Proyectos principales</h2>
+      <div class="grid3 projects">
+
+        <!-- PROYECTO 1 -->
+        <article class="card project" itemscope itemtype="https://schema.org/ResearchProject">
+          <div class="thumb" aria-label="Ilustración/Banner del proyecto">
+            <!-- 📌 Reemplaza src con tu ilustración. Colócala en /assets/img/proyectos/biodiversidad-clima/hero.webp (y hero.jpg/png como fallback). -->
+            <picture>
+              <source srcset="assets/img/proyectos/biodiversidad-clima/hero.webp" type="image/webp" />
+              <img src="assets/img/proyectos/biodiversidad-clima/hero.jpg" alt="Mapa y series temporales para biodiversidad y cambio climático" loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h3 itemprop="name">Ciencia de datos de la biodiversidad y el cambio climático</h3>
+            <p class="muted" itemprop="description">Modelos predictivos con grandes volúmenes de datos biológicos y ambientales para identificar patrones espaciales/temporales, evaluar riesgos y diseñar estrategias de conservación.</p>
+            <div class="meta">
+              <span class="chip">Big data ambiental</span>
+              <span class="chip">SDM</span>
+              <span class="chip">SIG</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROYECTO 2 -->
+        <article class="card project" itemscope itemtype="https://schema.org/ResearchProject">
+          <div class="thumb">
+            <!-- 📌 Ilustración en /assets/img/proyectos/ecoinformatica/hero.webp -->
+            <picture>
+              <source srcset="assets/img/proyectos/ecoinformatica/hero.webp" type="image/webp" />
+              <img src="assets/img/proyectos/ecoinformatica/hero.jpg" alt="Flujo reproducible de ecoinformática y calidad de datos (BeeBDC)" loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h3 itemprop="name">Ecoinformática y análisis de datos masivos</h3>
+            <p class="muted" itemprop="description">Construcción, depuración y estandarización de datasets globales (p. ej., BeeBDC &gt;18M registros) con flujos reproducibles (R/Python) para sesgos, QA/QC y trazabilidad.</p>
+            <div class="meta">
+              <span class="chip">R / Python</span>
+              <span class="chip">Datos abiertos</span>
+              <span class="chip">Reproducibilidad</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROYECTO 3 -->
+        <article class="card project" itemscope itemtype="https://schema.org/ResearchProject">
+          <div class="thumb">
+            <!-- 📌 Ilustración en /assets/img/proyectos/modelacion-procesos/hero.webp -->
+            <picture>
+              <source srcset="assets/img/proyectos/modelacion-procesos/hero.webp" type="image/webp" />
+              <img src="assets/img/proyectos/modelacion-procesos/hero.jpg" alt="Modelación de nicho, hibridación y trade-offs genéticos" loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h3 itemprop="name">Modelación computacional de procesos ecológicos y evolutivos</h3>
+            <p class="muted" itemprop="description">Nicho ecológico, hibridación bajo escenarios de cambio climático y trade-offs genéticos con modelos matemáticos y simulaciones poblacionales.</p>
+            <div class="meta">
+              <span class="chip">Evolución</span>
+              <span class="chip">Simulación</span>
+              <span class="chip">Cambio climático</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROYECTO 4 -->
+        <article class="card project" itemscope itemtype="https://schema.org/ResearchProject">
+          <div class="thumb">
+            <!-- 📌 Ilustración en /assets/img/proyectos/ia-conservacion/hero.webp -->
+            <picture>
+              <source srcset="assets/img/proyectos/ia-conservacion/hero.webp" type="image/webp" />
+              <img src="assets/img/proyectos/ia-conservacion/hero.jpg" alt="IA aplicada a conservación y seguridad alimentaria" loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h3 itemprop="name">IA para conservación y seguridad alimentaria</h3>
+            <p class="muted" itemprop="description">Aplicación de machine/deep learning para evaluar riesgo de extinción y apoyar decisiones en política ambiental y agroalimentaria.</p>
+            <div class="meta">
+              <span class="chip">ML/DL</span>
+              <span class="chip">Gestión ambiental</span>
+              <span class="chip">Agroecología</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROYECTO 5 -->
+        <article class="card project" itemscope itemtype="https://schema.org/ResearchProject">
+          <div class="thumb">
+            <!-- 📌 Ilustración en /assets/img/proyectos/bioinformatica/hero.webp -->
+            <picture>
+              <source srcset="assets/img/proyectos/bioinformatica/hero.webp" type="image/webp" />
+              <img src="assets/img/proyectos/bioinformatica/hero.jpg" alt="Bioinformática y ciencia reproducible" loading="lazy" />
+            </picture>
+          </div>
+          <div>
+            <h3 itemprop="name">Bioinformática y ciencia reproducible</h3>
+            <p class="muted" itemprop="description">Implementación de pipelines desde bases de datos hasta algoritmos, integrando control de versiones y empaquetado para investigación interdisciplinaria.</p>
+            <div class="meta">
+              <span class="chip">Pipelines</span>
+              <span class="chip">CI/CD de ciencia</span>
+              <span class="chip">Documentación</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- LÍNEA DE SÍNTESIS (de la carta) -->
+    <section id="linea" class="section card">
+      <h2>Línea de Síntesis Ecológica de Biodiversidad y Cambio Global</h2>
+      <p>Propongo consolidar en el Instituto de Ecología una línea que integre y estandarice bases de datos biológicos, ambientales y socioecológicos; desarrolle modelos predictivos y métricas reproducibles para identificar patrones de vulnerabilidad; y genere productos abiertos y estandarizados que fortalezcan la investigación y la política pública.</p>
       <ul>
-        <li><strong>Investigadora Posdoctoral</strong> — LANBioCC, UMDI Juriquilla, Facultad de Ciencias, UNAM (2022–presente)</li>
-        <li><strong>Investigadora Posdoctoral</strong> — Museo de Zoología, Facultad de Ciencias, UNAM (2021–2022)</li>
-        <li><strong>Postdoctoral Researcher</strong> — University of Kansas, EE. UU. (2019–2021)</li>
+        <li>¿Cómo impactan los estresores del cambio global a la biodiversidad?</li>
+        <li>¿Qué regiones concentran mayor vulnerabilidad socioecológica?</li>
+        <li>¿Cómo transformar datos abiertos en herramientas operativas para la gestión ambiental?</li>
       </ul>
-    </div>
+      <div class="chips">
+        <span class="chip">Bases de datos integradas</span>
+        <span class="chip">Métricas reproducibles</span>
+        <span class="chip">Productos abiertos</span>
+      </div>
+    </section>
 
-    
-        <li><strong>Predicting the prevalence of genetic trade-offs among adaptive substitutions</strong>. <span class="venue">Evolution, 2025</span> — <a href="https://doi.org/10.1093/evolut/qpaf061" target="_blank">DOI</a></li>
-        <li><strong>Female alternative reproductive tactics: diversity and drivers</strong>. <span class="venue">Trends in Ecology & Evolution, 2024</span> — <a href="https://doi.org/10.1016/j.tree.2024.06.002" target="_blank">DOI</a></li>
-        <li><strong>Merging socioecological variables to predict risk of Chagas disease</strong>. <span class="venue">Acta Tropica, 2024</span> — <a href="https://doi.org/10.1016/j.actatropica.2024.107098" target="_blank">DOI</a></li>
-        <li><strong>Critical areas for pollinator conservation in Mexico</strong>. <span class="venue">Biological Conservation, 2023</span> — <a href="https://doi.org/10.1016/j.biocon.2023.110119" target="_blank">DOI</a></li>
-        <li><strong>A globally synthesised and flagged bee occurrence dataset and cleaning workflow</strong>. <span class="venue">Scientific Data, 2023</span> — <a href="https://doi.org/10.1038/s41597-023-02660-8" target="_blank">DOI</a></li>
-        <li><strong>New insights into the geographic patterns of functional role and taxonomic richness of ants from Mexico</strong>. <span class="venue">Journal of Insect Conservation, 2023</span> — <a href="https://doi.org/10.1007/s10841-022-00412-2" target="_blank">DOI</a></li>
-        <li><strong>Estado del arte del conocimiento de biodiversidad de los polinizadores de México</strong>. <span class="venue">Revista Mexicana de Biodiversidad, 2022</span> — <a href="https://doi.org/10.22201/ib.20078706e.2022.93.4173" target="_blank">DOI</a></li>
-        <li><strong>Geographic potential of the world’s largest hornet, Vespa mandarinia</strong>. <span class="venue">PeerJ, 2021</span> — <a href="https://doi.org/10.7717/peerj.10690" target="_blank">DOI</a></li>
-        <li><strong>Predicting hybridisation as a consequence of climate change in damselflies</strong>. <span class="venue">Insect Conservation and Diversity, 2019</span> — <a href="https://doi.org/10.1111/icad.12359" target="_blank">DOI</a></li>
-        <li><strong>Hybridization, sex-specific genomic architecture and local adaptation</strong>. <span class="venue">Philosophical Transactions B, 2018</span> — <a href="https://doi.org/10.1098/rstb.2017.0419" target="_blank">DOI</a></li>
-      
-      <p class="muted" style="margin-top:6px">Lista completa en <a href="https://scholar.google.com/citations?user=4h8Jye4AAAAJ" target="_blank">Google Scholar</a>.</p>
-    </div>
+    <!-- BLOQUES DETALLADOS POR PROYECTO CON ESPACIOS PARA ILUSTRACIONES INTERNAS -->
+    <section class="section">
+      <h2>Detalles e ilustraciones por proyecto</h2>
+      <div class="grid2">
+        <!-- Detalle P1 -->
+        <article class="card">
+          <h3>Ciencia de datos de la biodiversidad y el cambio climático</h3>
+          <p>Identificación de áreas prioritarias para polinizadores en México integrando riqueza/endemismo (abejas, colibríes, murciélagos, esfíngidos), huella humana y uso de plaguicidas para escenarios de política pública (Biological Conservation, 2023).</p>
+          <div class="grid2">
+            <!-- 📌 Coloca figuras comparativas, mapas y series temporales -->
+            <figure class="thumb">
+              <img src="assets/img/proyectos/biodiversidad-clima/mapa-prioridad.jpg" alt="Mapa de prioridad para polinizadores" loading="lazy" />
+              <figcaption class="muted">Mapa de prioridad espacial (colocar en <code>/assets/img/proyectos/biodiversidad-clima/</code>).</figcaption>
+            </figure>
+            <figure class="thumb">
+              <img src="assets/img/proyectos/biodiversidad-clima/series-tiempo.jpg" alt="Series de tiempo climáticas" loading="lazy" />
+              <figcaption class="muted">Series de tiempo climáticas y biodiversidad.</figcaption>
+            </figure>
+          </div>
+        </article>
 
-    <div class="card section" id="docencia">
+        <!-- Detalle P2 -->
+        <article class="card">
+          <h3>Ecoinformática y análisis de datos masivos</h3>
+          <p>BeeBDC (Scientific Data, 2023): >18M de registros de abejas con QA/QC y trazabilidad. Flujos reproducibles para sesgos, estandarización y flags de calidad.</p>
+          <div class="grid2">
+            <!-- 📌 Coloca diagramas de flujo y paneles de QA/QC -->
+            <figure class="thumb">
+              <img src="assets/img/proyectos/ecoinformatica/flujo-bebdc.png" alt="Flujo reproducible BeeBDC" loading="lazy" />
+              <figcaption class="muted">Flujo reproducible (poner en <code>/assets/img/proyectos/ecoinformatica/</code>).</figcaption>
+            </figure>
+            <figure class="thumb">
+              <img src="assets/img/proyectos/ecoinformatica/qaqc-panel.png" alt="Panel QA/QC datos de abejas" loading="lazy" />
+              <figcaption class="muted">Panel QA/QC y distribución global.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- Detalle P3 -->
+        <article class="card">
+          <h3>Modelación computacional de procesos ecológicos y evolutivos</h3>
+          <p>Simulaciones de hibridación inducida por cambio climático y trade-offs genéticos (Evolution, 2025). Modelos de nicho y zonas de contacto potencial.</p>
+          <div class="grid2">
+            <!-- 📌 Coloca animaciones GIF o secuencias de mapas -->
+            <figure class="thumb">
+              <img src="assets/img/proyectos/modelacion-procesos/hibridacion.gif" alt="Animación de hibridación bajo cambio climático" loading="lazy" />
+              <figcaption class="muted">Animación/figura de hibridación.</figcaption>
+            </figure>
+            <figure class="thumb">
+              <img src="assets/img/proyectos/modelacion-procesos/tradeoffs.png" alt="Trade-offs genéticos" loading="lazy" />
+              <figcaption class="muted">Esquema de trade-offs genéticos.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- Detalle P4 -->
+        <article class="card">
+          <h3>IA para conservación y seguridad alimentaria</h3>
+          <p>Algoritmos ML/DL para riesgo de extinción y soporte a decisiones ambientales/agroalimentarias. Incluye el <em>Honey Bee Health Grant</em> (Pollinator Partnership, 2025) con evaluación de riesgo enfermedad <em>Apis mellifera</em>–parásitos bajo cambio climático.</p>
+          <div class="grid2">
+            <!-- 📌 Coloca matrices de confusión, curvas ROC/PR y mapas de riesgo -->
+            <figure class="thumb">
+              <img src="assets/img/proyectos/ia-conservacion/mapa-riesgo.png" alt="Mapa de riesgo de enfermedad en abejas" loading="lazy" />
+              <figcaption class="muted">Mapa de riesgo (poner en <code>/assets/img/proyectos/ia-conservacion/</code>).</figcaption>
+            </figure>
+            <figure class="thumb">
+              <img src="assets/img/proyectos/ia-conservacion/roc.png" alt="Curva ROC de modelo de riesgo" loading="lazy" />
+              <figcaption class="muted">Métricas de desempeño (ROC/PR).</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- Detalle P5 -->
+        <article class="card">
+          <h3>Bioinformática y ciencia reproducible</h3>
+          <p>Pipelines del dato al paper: ingesta, limpieza, análisis, visualización y empaquetado. Integración con control de versiones y documentación para replicabilidad.</p>
+          <div class="grid2">
+            <!-- 📌 Coloca capturas de notebooks, DAGs y documentación -->
+            <figure class="thumb">
+              <img src="assets/img/proyectos/bioinformatica/dag.png" alt="DAG de pipeline científico" loading="lazy" />
+              <figcaption class="muted">DAG del pipeline.</figcaption>
+            </figure>
+            <figure class="thumb">
+              <img src="assets/img/proyectos/bioinformatica/notebook.png" alt="Notebook de análisis" loading="lazy" />
+              <figcaption class="muted">Notebook reproducible.</figcaption>
+            </figure>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- DOCENCIA -->
+    <section id="docencia" class="section card">
       <h2>Docencia y mentoría</h2>
-      <ul>
-        <li>Licenciatura y Posgrado (UNAM): biodiversidad, modelado ecológico, programación científica (R/Python).</li>
-        <li>Dirección y co-dirección de tesis; talleres de ciencia abierta y reproducibilidad.</li>
-      </ul>
-    </div>
+      <p>Experiencia en licenciatura y posgrado (Facultad de Ciencias, FES Iztacala, ENES Juriquilla) con cursos en evolución, ecología evolutiva, planeación del territorio, programación (R/Python) y ciencia de datos. Dirección de 3 tesis de licenciatura y 1 de maestría; supervisión de estudiantes de múltiples niveles.</p>
+      <p>Objetivo docente: acercar a estudiantes a la práctica de la síntesis ecológica integrando modelación, macroecología, ecoinformática e IA con aplicaciones reales.</p>
+    </section>
 
-    <div class="card section" id="proyectos">
-      <h2>Proyectos y datos</h2>
+    <!-- RESULTADOS / MÉTRICAS -->
+    <section id="metricas" class="section card">
+      <h2>Resultados y métrica de impacto</h2>
       <ul>
-        <li><strong>Conectividad y áreas prioritarias para polinizadores</strong> — scripts y mapas (próximamente en GitHub).</li>
-        <li><strong>Curación de datos de abejas</strong> — flujos reproducibles para QA/QC de ocurrencias (BeeBDC).</li>
+        <li>20 artículos en revistas indexadas (Trends in Ecology & Evolution, Scientific Data, Biological Conservation, Phil. Trans. B).</li>
+        <li>400+ citas; índice H = 11 (Google Scholar).</li>
+        <li>Financiamiento reciente: <em>Honey Bee Health Grant</em> (Pollinator Partnership, 2025).</li>
+        <li>Red de colaboración: Museo de Zoología UNAM, Biodiversity Institute (KU), CONABIO, LANBioCC.</li>
       </ul>
-    </div>
+    </section>
 
-    
-    <div class="card section" id="financiamiento">
-      <h2>Financiamiento</h2>
+    <!-- CTA / ENLACES -->
+    <section class="section card">
+      <h2>Datos y materiales</h2>
+      <p>Cuando los repositorios estén públicos, enlázalos aquí:</p>
       <ul>
-        <li><strong>2025</strong> — NAPPC Honey Bee Health Grant (Pollinator Partnership). Responsable del proyecto <em>Ecological and Spatial Overlap Between Apis mellifera and Parasites</em>.</li>
-        <li><strong>2022</strong> — PAPIIT IA203922 (DGAPA-UNAM). Participante.</li>
-        <li><strong>2021</strong> — PAPIIT IN214621 (DGAPA-UNAM). Participante.</li>
-        <li><strong>2018</strong> — PAPIIT IN206618 (DGAPA-UNAM). Participante.</li>
+        <li><a href="#">Repositorio BeeBDC</a> (próximamente)</li>
+        <li><a href="#">Mapas de prioridad espacial</a> (próximamente)</li>
+        <li><a href="#">Pipelines de riesgo ecológico</a> (próximamente)</li>
       </ul>
-    </div>
-    <div class="card section" id="distinciones">
-      <h2>Distinciones</h2>
-      <ul>
-        <li>Sistema Nacional de Investigadores (SNI) — Nivel I (desde 2020).</li>
-        <li>1° Premio a la Investigación en Cambio Climático PINCC, UNAM (Mención Honorífica, 2021).</li>
-        <li>Becas posdoctorales: DGAPA-UNAM (2021), CONACYT (2022), SECTEI CDMX (2019).</li>
-        <li>Latin American Travel Award — Animal Behavior Society (2017).</li>
-        <li>ESEB Special Topic Research Network (2017–2023).</li>
-      </ul>
-    </div>
-    <div class="card section" id="experiencia-profesional">
-      <h2>Experiencia profesional</h2>
-      <p class="muted">Coordinación académica de cursos y diplomados a distancia (2017–2018) en la Facultad de Ciencias, UNAM: diseño curricular, coordinación de facilitadores y administración de cursos en línea.</p>
-    </div>
-    <div class="card section" id="formacion-rh">
-      <h2>Formación de recursos humanos</h2>
-      <ul>
-        <li><strong>Licenciatura</strong>: Gustavo Vázquez M.; Eduardo U. Castillo; María del Pilar Escamilla H.</li>
-        <li><strong>Maestría</strong>: Kassandra Ojeda Hinds.</li>
-      </ul>
-    </div>
-    <div class="card section" id="congresos">
-      <h2>Congresos, seminarios y talleres</h2>
-      <ul>
-        <li>IX Congreso Mexicano de Ecología (2024) — Simposio de Macroecología.</li>
-        <li>Foro de Planeación del Territorio (2024).</li>
-        <li>XXVI Simposio de Zoología, U. de Guadalajara (2024) — Ponencia magistral.</li>
-        <li>Congreso Mesoamericano de Abejas Nativas (2023); ESA Annual Meeting (2020).</li>
-      </ul>
-    </div>
-    <div class="card section" id="divulgacion">
-      <h2>Divulgación y difusión</h2>
-      <ul>
-        <li>Conferencias y talleres 2023–2025 sobre biodiversidad y polinizadores (UNAM, UAQ, Costa Rica, etc.).</li>
-        <li>Divulgación en Revista de la Universidad de México, Boletines y reseñas.</li>
-      </ul>
-    </div>
-    <div class="card section" id="servicio">
-      <h2>Servicio académico</h2>
-      <ul>
-        <li>Evaluadora CONACYT (Ciencia Básica y de Frontera; Estancias Posdoctorales 2023–2024).</li>
-        <li>Árbitro en <em>Biological Conservation</em>, <em>Perspectives in Ecology and Conservation</em>, <em>Apidologie</em>.</li>
-        <li>Integrante externa de Comité Ad hoc en ECOSUR (2025).</li>
-      </ul>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
 
-<footer>
-  © <span id="year"></span> Angela Nava Bolaños · <a href="mailto:anb@ciencias.unam.mx">Contacto</a>
-</footer>
+  <footer>
+    © <span id="year"></span> Angela Nava Bolaños · <a href="mailto:anb@ciencias.unam.mx">Contacto</a>
+  </footer>
 
-<script>
-  const root=document.documentElement; const saved=localStorage.getItem('theme'); if(saved==='light') root.classList.add('light');
-  document.getElementById('theme').addEventListener('click',()=>{ root.classList.toggle('light'); localStorage.setItem('theme', root.classList.contains('light')?'light':'dark'); });
-  document.getElementById('year').textContent=new Date().getFullYear();
-  // Structured data Person (JSON-LD)
-  const ld={"@context":"https://schema.org","@type":"Person","name":"Angela Nava Bolaños","email":"mailto:anb@ciencias.unam.mx","affiliation":{"@type":"CollegeOrUniversity","name":"Universidad Nacional Autónoma de México"},"url":"https://angelanava.github.io","sameAs":["https://orcid.org/0000-0002-4371-5415","https://scholar.google.com/citations?user=4h8Jye4AAAAJ","https://www.scopus.com/authid/detail.uri?authorId=54420738800"]};
-  const s=document.createElement('script'); s.type='application/ld+json'; s.textContent=JSON.stringify(ld); document.head.appendChild(s);
-</script>
+  <script>
+    // Tema
+    const root = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    if (saved === 'light') root.classList.add('light');
+    document.getElementById('theme').addEventListener('click', () => {
+      root.classList.toggle('light');
+      localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark');
+    });
+
+    // Año
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Structured data Person + ResearchProject
+    const ld = {
+      "@context":"https://schema.org",
+      "@type":"Person",
+      "name":"Angela Nava Bolaños",
+      "email":"mailto:anb@ciencias.unam.mx",
+      "affiliation":{"@type":"CollegeOrUniversity","name":"Universidad Nacional Autónoma de México"},
+      "url":"https://angelanava.github.io",
+      "sameAs":[
+        "https://orcid.org/0000-0002-4371-5415",
+        "https://scholar.google.com/citations?user=4h8Jye4AAAAJ",
+        "https://www.scopus.com/authid/detail.uri?authorId=54420738800"
+      ],
+      "hasPart": [
+        {"@type":"ResearchProject","name":"Ciencia de datos de la biodiversidad y el cambio climático"},
+        {"@type":"ResearchProject","name":"Ecoinformática y análisis de datos masivos"},
+        {"@type":"ResearchProject","name":"Modelación computacional de procesos ecológicos y evolutivos"},
+        {"@type":"ResearchProject","name":"IA para conservación y seguridad alimentaria"},
+        {"@type":"ResearchProject","name":"Bioinformática y ciencia reproducible"}
+      ]
+    };
+    const s = document.createElement('script');
+    s.type = 'application/ld+json';
+    s.textContent = JSON.stringify(ld);
+    document.head.appendChild(s);
+  </script>
 </body>
 </html>
 
